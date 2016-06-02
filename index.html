@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Realtime Quiz</title>
+  <meta name="description" content="quiz">
+  <meta name="author" content="henry">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="row">
+      <div class="span5">
+      	Teacher:
+      	<input id="name" type="text">
+     	<button onclick="App.init();" class="connectBtn btn">Connect</button>
+      	<div class="question">
+	      	<form>
+		      <fieldset>
+		        <legend>Quiz Question</legend>
+		        <label class="checkbox">Question
+		        <textarea id="question" rows="3"></textarea></label>
+		        <label class="checkbox">
+		          Answer A <input id="ans1" type="text">
+		        </label>
+		        <label class="checkbox">
+		          Answer B <input id="ans2" type="text">
+		        </label>
+		        <label class="checkbox">
+		          Answer C <input id="ans3" type="text">
+		        </label>
+		        <button type="submit" onclick="App.submitQuestion();return false;" class="btn">Submit</button>
+		      </fieldset>
+		    </form>
+		</div>
+
+      </div>
+      <div class="span4">
+      	<div class="response">
+      		Response here
+      		    <div class="progress">
+			      <div id="progressA" class="bar bar-success" style="width: 0%;">A</div>
+			      <div id="progressB" class="bar bar-warning" style="width: 0%;">B</div>
+			      <div id="progressC" class="bar bar-danger" style="width: 0%;">C</div>
+			    </div>
+			    <span class="tally"></span>
+		</div>
+
+      	<div id="users">
+		    <ul class="nav nav-tabs nav-stacked">
+              <li><a href="#">User 1</a></li>
+            </ul>
+		</div>
+      </div>
+    </div>
+  <script src="http://cdn.pubnub.com/pubnub-3.14.5.min.js"></script>
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>

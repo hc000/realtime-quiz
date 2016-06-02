@@ -1,0 +1,59 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Realtime Quiz</title>
+  <meta name="description" content="quiz">
+  <meta name="author" content="henry">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="row">
+      <div class="span5">
+      	Name:
+      	<input id="name" type="text">
+     	<button onclick="App.init(); App.loadQuestionFromHistory();" class="connectBtn btn">Connect</button>
+      	<div class="question">
+	      	<form id="formQuestion">
+		      <fieldset>
+		        <legend>Quiz Question</legend>
+		        <label class="checkbox">Question
+		        <textarea id="question" rows="3" disabled></textarea></label>
+					<label class="radio">
+					  <input type="radio" name="optionsRadios" id="optionsRadios1" value="A">
+					  <div id="optionsRadios1text"></div>
+					</label>
+					<label class="radio">
+					  <input type="radio" name="optionsRadios" id="optionsRadios2" value="B">
+					  <div id="optionsRadios2text"></div>
+					</label>
+					<label class="radio">
+					  <input type="radio" name="optionsRadios" id="optionsRadios3" value="C">
+					  <div id="optionsRadios3text"></div>
+					</label>
+		        <button type="submit" onclick="App.submitAnswer();return false;" class="submitBtn btn">Submit</button>
+		      </fieldset>
+		    </form>
+		</div>
+
+      </div>
+      <div class="span4">
+      	<div id="users">
+		    <ul class="nav nav-tabs nav-stacked">
+              <li><a href="#">User 1</a></li>
+            </ul>
+		</div>
+      </div>
+    </div>
+  <script src="http://cdn.pubnub.com/pubnub-3.14.5.min.js"></script>
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
