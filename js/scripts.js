@@ -91,6 +91,10 @@ App = {};
 					B : 0,
 					C : 0
 				};
+
+				$("#progressA").css("width",ans[data]*10);
+				$("#progressB").css("width",ans[data]*10);
+				$("#progressC").css("width",ans[data]*10);
 		    }
 		});
 
