@@ -18,6 +18,6 @@ The teacher counter is reset when the teacher submits a new question.
 
 ##Dependencies
 --------------
-*Bootstrap
-*JQuery
-*Pubnub
+* Bootstrap
+* JQuery
+* Pubnub
